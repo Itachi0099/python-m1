@@ -6,9 +6,7 @@ print("Original DataFrame:")
 print(df)
 average_score = df['Score'].mean()
 print("\nAverage Score:", average_score)
-sorted_df = df.sort_values(by='Score', ascending=False)
+df = df.sort_values(by='Score', ascending=False)
+df['Passed'] = df['Score'] >= 85
 print("\nDataFrame sorted by Score in descending order:")
-print(sorted_df)
-
-
-#837D-6F5A. 
+print(df)
